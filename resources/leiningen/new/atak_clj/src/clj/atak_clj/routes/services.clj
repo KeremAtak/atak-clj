@@ -1,16 +1,15 @@
 (ns {{name}}.routes.services
-  (:require
-    [reitit.swagger :as swagger]
-    [reitit.swagger-ui :as swagger-ui]
-    [reitit.ring.coercion :as coercion]
-    [reitit.coercion.spec :as spec-coercion]
-    [reitit.ring.middleware.muuntaja :as muuntaja]
-    [reitit.ring.middleware.multipart :as multipart]
-    [reitit.ring.middleware.parameters :as parameters]
-    [{{name}}.middleware.formats :as formats]
-    [{{name}}.middleware.exception :as exception]
-    [ring.util.http-response :refer :all]
-    [clojure.java.io :as io]))
+  (:require [reitit.swagger :as swagger]
+            [reitit.swagger-ui :as swagger-ui]
+            [reitit.ring.coercion :as coercion]
+            [reitit.coercion.spec :as spec-coercion]
+            [reitit.ring.middleware.muuntaja :as muuntaja]
+            [reitit.ring.middleware.multipart :as multipart]
+            [reitit.ring.middleware.parameters :as parameters]
+            [{{name}}.middleware.formats :as formats]
+            [{{name}}.middleware.exception :as exception]
+            [ring.util.http-response :refer :all]
+            [clojure.java.io :as io]))
 
 (defn service-routes []
   ["/api"

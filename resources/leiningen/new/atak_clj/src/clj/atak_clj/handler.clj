@@ -1,15 +1,14 @@
 (ns {{name}}.handler
-  (:require
-    [{{name}}.middleware :as middleware]
-    [{{name}}.layout :refer [error-page]]
-    [{{name}}.routes.home :refer [home-routes]]
-    [{{name}}.routes.services :refer [service-routes]]
-    [reitit.swagger-ui :as swagger-ui]
-    [reitit.ring :as ring]
-    [ring.middleware.content-type :refer [wrap-content-type]]
-    [ring.middleware.webjars :refer [wrap-webjars]]
-    [{{name}}.env :refer [defaults]]
-    [mount.core :as mount]))
+  (:require [{{name}}.middleware :as middleware]
+            [{{name}}.layout :refer [error-page]]
+            [{{name}}.routes.home :refer [home-routes]]
+            [{{name}}.routes.services :refer [service-routes]]
+            [reitit.swagger-ui :as swagger-ui]
+            [reitit.ring :as ring]
+            [ring.middleware.content-type :refer [wrap-content-type]]
+            [ring.middleware.webjars :refer [wrap-webjars]]
+            [{{name}}.env :refer [defaults]]
+            [mount.core :as mount]))
 
 (mount/defstate init-app
   :start ((or (:init defaults) (fn [])))

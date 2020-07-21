@@ -1,11 +1,10 @@
 (ns {{name}}.test.handler
-  (:require
-    [clojure.test :refer :all]
-    [ring.mock.request :refer :all]
-    [{{name}}.handler :refer :all]
-    [{{name}}.middleware.formats :as formats]
-    [muuntaja.core :as m]
-    [mount.core :as mount]))
+  (:require [clojure.test :refer :all]
+            [ring.mock.request :refer :all]
+            [{{name}}.handler :refer :all]
+            [{{name}}.middleware.formats :as formats]
+            [muuntaja.core :as m]
+            [mount.core :as mount]))
 
 (defn parse-json [body]
   (m/decode formats/instance "application/json" body))
