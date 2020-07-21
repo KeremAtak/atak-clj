@@ -1,12 +1,12 @@
 (ns user
   "Userspace functions you can run by default in your local REPL."
   (:require
-   [swagger-example.config :refer [env]]
+   [{{name}}.config :refer [env]]
     [clojure.pprint]
     [clojure.spec.alpha :as s]
     [expound.alpha :as expound]
     [mount.core :as mount]
-    [swagger-example.core :refer [start-app]]))
+    [{{name}}.core :refer [start-app]]))
 
 (alter-var-root #'s/*explain-out* (constantly expound/printer))
 
@@ -16,12 +16,12 @@
   "Starts application.
   You'll usually want to run this on startup."
   []
-  (mount/start-without #'swagger-example.core/repl-server))
+  (mount/start-without #'{{name}}.core/repl-server))
 
 (defn stop
   "Stops application."
   []
-  (mount/stop-except #'swagger-example.core/repl-server))
+  (mount/stop-except #'{{name}}.core/repl-server))
 
 (defn restart
   "Restarts application."

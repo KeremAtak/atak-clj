@@ -1,4 +1,4 @@
-(ns swagger-example.middleware.exception
+(ns {{name}}.middleware.exception
   (:require [clojure.tools.logging :as log]
             [expound.alpha :as expound]
             [reitit.coercion :as coercion]

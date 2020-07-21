@@ -1,4 +1,4 @@
-(ns swagger-example.dev-middleware
+(ns {{name}}.dev-middleware
   (:require
     [ring.middleware.reload :refer [wrap-reload]]
     [selmer.middleware :refer [wrap-error-page]]
@@ -8,4 +8,4 @@
   (-> handler
       wrap-reload
       wrap-error-page
-      (wrap-exceptions {:app-namespaces ['swagger-example]})))
+      (wrap-exceptions {:app-namespaces ['{{name}}]})))

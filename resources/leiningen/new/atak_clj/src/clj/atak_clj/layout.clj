@@ -1,4 +1,4 @@
-(ns swagger-example.layout
+(ns {{name}}.layout
   (:require
     [clojure.java.io]
     [selmer.parser :as parser]

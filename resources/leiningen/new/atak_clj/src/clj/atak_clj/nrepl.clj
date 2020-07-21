@@ -1,4 +1,4 @@
-(ns swagger-example.nrepl
+(ns {{name}}.nrepl
   (:require
     [nrepl.server :as nrepl]
     [clojure.tools.logging :as log]))

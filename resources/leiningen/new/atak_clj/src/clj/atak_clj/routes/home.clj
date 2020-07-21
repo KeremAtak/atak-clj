@@ -1,8 +1,8 @@
-(ns swagger-example.routes.home
+(ns {{name}}.routes.home
   (:require
-   [swagger-example.layout :as layout]
+   [{{name}}.layout :as layout]
    [clojure.java.io :as io]
-   [swagger-example.middleware :as middleware]
+   [{{name}}.middleware :as middleware]
    [ring.util.response]
    [ring.util.http-response :as response]))
 

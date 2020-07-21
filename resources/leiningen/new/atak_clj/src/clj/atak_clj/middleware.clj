@@ -1,14 +1,14 @@
-(ns swagger-example.middleware
+(ns {{name}}.middleware
   (:require
-    [swagger-example.env :refer [defaults]]
+    [{{name}}.env :refer [defaults]]
     [cheshire.generate :as cheshire]
     [cognitect.transit :as transit]
     [clojure.tools.logging :as log]
-    [swagger-example.layout :refer [error-page]]
+    [{{name}}.layout :refer [error-page]]
     [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
-    [swagger-example.middleware.formats :as formats]
+    [{{name}}.middleware.formats :as formats]
     [muuntaja.middleware :refer [wrap-format wrap-params]]
-    [swagger-example.config :refer [env]]
+    [{{name}}.config :refer [env]]
     [ring.middleware.flash :refer [wrap-flash]]
     [ring.adapter.undertow.middleware.session :refer [wrap-session]]
     [ring.middleware.defaults :refer [site-defaults wrap-defaults]])

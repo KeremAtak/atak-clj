@@ -1,9 +1,9 @@
-(ns swagger-example.core
+(ns {{name}}.core
   (:require
-    [swagger-example.handler :as handler]
-    [swagger-example.nrepl :as nrepl]
+    [{{name}}.handler :as handler]
+    [{{name}}.nrepl :as nrepl]
     [luminus.http-server :as http]
-    [swagger-example.config :refer [env]]
+    [{{name}}.config :refer [env]]
     [clojure.tools.cli :refer [parse-opts]]
     [clojure.tools.logging :as log]
     [mount.core :as mount])

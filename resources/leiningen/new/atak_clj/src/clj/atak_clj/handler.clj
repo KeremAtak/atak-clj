@@ -1,14 +1,14 @@
-(ns swagger-example.handler
+(ns {{name}}.handler
   (:require
-    [swagger-example.middleware :as middleware]
-    [swagger-example.layout :refer [error-page]]
-    [swagger-example.routes.home :refer [home-routes]]
-    [swagger-example.routes.services :refer [service-routes]]
+    [{{name}}.middleware :as middleware]
+    [{{name}}.layout :refer [error-page]]
+    [{{name}}.routes.home :refer [home-routes]]
+    [{{name}}.routes.services :refer [service-routes]]
     [reitit.swagger-ui :as swagger-ui]
     [reitit.ring :as ring]
     [ring.middleware.content-type :refer [wrap-content-type]]
     [ring.middleware.webjars :refer [wrap-webjars]]
-    [swagger-example.env :refer [defaults]]
+    [{{name}}.env :refer [defaults]]
     [mount.core :as mount]))
 
 (mount/defstate init-app

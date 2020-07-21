@@ -1,4 +1,4 @@
-(ns swagger-example.config
+(ns {{name}}.config
   (:require
     [cprop.core :refer [load-config]]
     [cprop.source :as source]

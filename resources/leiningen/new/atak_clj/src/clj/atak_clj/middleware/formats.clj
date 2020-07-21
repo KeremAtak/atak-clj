@@ -1,4 +1,4 @@
-(ns swagger-example.middleware.formats
+(ns {{name}}.middleware.formats
   (:require
     [cognitect.transit :as transit]
     [luminus-transit.time :as time]

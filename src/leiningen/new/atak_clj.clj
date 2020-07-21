@@ -1,18 +1,18 @@
-(ns leiningen.new.atak-clj
+(ns leiningen.new.{{name}}
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :refer [info]]))
 
-(def render (renderer "atak-clj"))
+(def render (renderer "{{name}}"))
 
-(defn atak-clj
+(defn {{name}}
   "FIXME: write documentation"
   [name]
   (let [data {:name      name
               :sanitized (name-to-path name)}]
-    (info "Generating fresh 'lein new' atak-clj project.")
+    (info "Generating fresh 'lein new' {{name}} project.")
     (->files data
-             ["src/{{sanitized}}/core.clj" (render "src/atak-clj/core.clj" data)]
-             ["test/{{sanitized}}/core_test.clj" (render "test/atak-clj/core_test.clj" data)]
+             ["src/{{sanitized}}/core.clj" (render "src/{{name}}/core.clj" data)]
+             ["test/{{sanitized}}/core_test.clj" (render "test/{{name}}/core_test.clj" data)]
              ["project.clj" (render "project.clj" data)]
              [".gitignore" (render ".gitignore" data)]
              ["LICENSE" (render "LICENSE" data)]

@@ -1,4 +1,4 @@
-(defproject swagger-example "0.1.0-SNAPSHOT"
+(defproject {{name}} "0.1.0-SNAPSHOT"
 
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
@@ -39,14 +39,14 @@
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
   :target-path "target/%s/"
-  :main ^:skip-aot swagger-example.core
+  :main ^:skip-aot {{name}}.core
 
   :plugins []
 
   :profiles
   {:uberjar {:omit-source true
              :aot :all
-             :uberjar-name "swagger-example.jar"
+             :uberjar-name "{{name}}.jar"
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
 

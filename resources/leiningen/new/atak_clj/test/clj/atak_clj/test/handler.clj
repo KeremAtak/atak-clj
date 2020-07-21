@@ -1,9 +1,9 @@
-(ns swagger-example.test.handler
+(ns {{name}}.test.handler
   (:require
     [clojure.test :refer :all]
     [ring.mock.request :refer :all]
-    [swagger-example.handler :refer :all]
-    [swagger-example.middleware.formats :as formats]
+    [{{name}}.handler :refer :all]
+    [{{name}}.middleware.formats :as formats]
     [muuntaja.core :as m]
     [mount.core :as mount]))
 
@@ -13,8 +13,8 @@
 (use-fixtures
   :once
   (fn [f]
-    (mount/start #'swagger-example.config/env
-                 #'swagger-example.handler/app-routes)
+    (mount/start #'{{name}}.config/env
+                 #'{{name}}.handler/app-routes)
     (f)))
 
 (deftest test-app

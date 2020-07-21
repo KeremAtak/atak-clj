@@ -1,4 +1,4 @@
-(ns swagger-example.routes.services
+(ns {{name}}.routes.services
   (:require
     [reitit.swagger :as swagger]
     [reitit.swagger-ui :as swagger-ui]
@@ -7,8 +7,8 @@
     [reitit.ring.middleware.muuntaja :as muuntaja]
     [reitit.ring.middleware.multipart :as multipart]
     [reitit.ring.middleware.parameters :as parameters]
-    [swagger-example.middleware.formats :as formats]
-    [swagger-example.middleware.exception :as exception]
+    [{{name}}.middleware.formats :as formats]
+    [{{name}}.middleware.exception :as exception]
     [ring.util.http-response :refer :all]
     [clojure.java.io :as io]))
 
