@@ -1,0 +1,1 @@
+web: java -Dclojure.main.report=stderr -cp target/uberjar/swagger-example.jar clojure.main -m swagger-example.core
