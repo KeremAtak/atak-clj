@@ -43,15 +43,18 @@
 
     ["/api-docs/*"
      {:get (swagger-ui/create-swagger-ui-handler
-             {:url "/api/swagger.json"
-              :config {:validator-url nil}})}]]
+            {:url "/api/swagger.json"
+             :config {:validator-url nil}})}]]
 
    ["/ping"
     {:get (constantly (ok {:message "pong"}))}]
-   
+
 
    ["/math"
     {:swagger {:tags ["math"]}}
+
+    {{! Change mustache delimiter to <% and %>}}
+    {{=<% %>=}}
 
     ["/plus"
      {:get {:summary "plus with spec query parameters"
@@ -78,7 +81,8 @@
                         {:status 200
                          :body {:name (:filename file)
                                 :size (:size file)}})}}]
-
+    <%! Reset mustache delimiter %>
+    <%={{ }}=%>
     ["/download"
      {:get {:summary "downloads a file"
             :swagger {:produces ["image/png"]}
