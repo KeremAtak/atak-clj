@@ -2,6 +2,8 @@
 
 A Leiningen template for FIXME.
 
+http://localhost:3000/swagger-ui/index.html
+
 ## Usage
 
 FIXME
