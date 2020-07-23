@@ -1,10 +1,10 @@
 (ns {{name}}.core
-    (:require [{{name}}.handler :as handler]
+    (:require [{{name}}.config :refer [env]]
+              [{{name}}.handler :as handler]
               [{{name}}.nrepl :as nrepl]
-              [luminus.http-server :as http]
-              [{{name}}.config :refer [env]]
               [clojure.tools.cli :refer [parse-opts]]
               [clojure.tools.logging :as log]
+              [luminus.http-server :as http]
               [mount.core :as mount]))
 
 ;; log uncaught exceptions in threads

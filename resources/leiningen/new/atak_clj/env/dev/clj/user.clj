@@ -1,11 +1,11 @@
 (ns user
   "Userspace functions you can run by default in your local REPL."
   (:require [{{name}}.config :refer [env]]
+            [{{name}}.core :refer [start-app]]
             [clojure.pprint]
             [clojure.spec.alpha :as s]
             [expound.alpha :as expound]
-            [mount.core :as mount]
-            [{{name}}.core :refer [start-app]]))
+            [mount.core :as mount]))
 
 (alter-var-root #'s/*explain-out* (constantly expound/printer))
 

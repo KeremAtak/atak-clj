@@ -1,6 +1,6 @@
 (ns leiningen.new.atak-clj
-  (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
-            [leiningen.core.main :refer [info]]))
+  (:require [leiningen.core.main :refer [info]]
+            [leiningen.new.templates :refer [renderer name-to-path ->files]]))
 
 (def render (renderer "atak-clj"))
 

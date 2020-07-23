@@ -1,16 +1,16 @@
 (ns {{name}}.middleware
-    (:require [{{name}}.env :refer [defaults]]
-              [cheshire.generate :as cheshire]
-              [cognitect.transit :as transit]
-              [clojure.tools.logging :as log]
+    (:require [{{name}}.config :refer [env]]
+              [{{name}}.env :refer [defaults]]
               [{{name}}.layout :refer [error-page]]
-              [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
               [{{name}}.middleware.formats :as formats]
+              [cheshire.generate :as cheshire]
+              [clojure.tools.logging :as log]
+              [cognitect.transit :as transit]
               [muuntaja.middleware :refer [wrap-format wrap-params]]
-              [{{name}}.config :refer [env]]
-              [ring.middleware.flash :refer [wrap-flash]]
               [ring.adapter.undertow.middleware.session :refer [wrap-session]]
-              [ring.middleware.defaults :refer [site-defaults wrap-defaults]]))
+              [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
+              [ring.middleware.defaults :refer [site-defaults wrap-defaults]]
+              [ring.middleware.flash :refer [wrap-flash]]))
 
 (defn wrap-internal-error [handler]
   (fn [req]

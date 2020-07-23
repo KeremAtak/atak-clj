@@ -1,12 +1,12 @@
 (ns {{name}}.handler
-  (:require [{{name}}.middleware :as middleware]
+  (:require [{{name}}.env :refer [defaults]]
+            [{{name}}.middleware :as middleware]
             [{{name}}.layout :refer [error-page]]
             [{{name}}.routes.services :refer [service-routes]]
-            [reitit.swagger-ui :as swagger-ui]
             [reitit.ring :as ring]
+            [reitit.swagger-ui :as swagger-ui]
             [ring.middleware.content-type :refer [wrap-content-type]]
             [ring.middleware.webjars :refer [wrap-webjars]]
-            [{{name}}.env :refer [defaults]]
             [mount.core :as mount]))
 
 (mount/defstate init-app
