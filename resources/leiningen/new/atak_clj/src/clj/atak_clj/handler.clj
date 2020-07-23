@@ -1,7 +1,6 @@
 (ns {{name}}.handler
   (:require [{{name}}.middleware :as middleware]
             [{{name}}.layout :refer [error-page]]
-            [{{name}}.routes.home :refer [home-routes]]
             [{{name}}.routes.services :refer [service-routes]]
             [reitit.swagger-ui :as swagger-ui]
             [reitit.ring :as ring]
@@ -18,8 +17,7 @@
   :start
   (ring/ring-handler
     (ring/router
-      [(home-routes)
-       (service-routes)])
+      [(service-routes)])
     (ring/routes
       (swagger-ui/create-swagger-ui-handler
         {:path   "/swagger-ui"
