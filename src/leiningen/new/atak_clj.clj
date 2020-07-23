@@ -34,7 +34,7 @@
              ["src/clj/{{sanitized}}/layout.clj" (render "src/clj/atak_clj/layout.clj" data)]
              ["src/clj/{{sanitized}}/middleware.clj" (render "src/clj/atak_clj/middleware.clj" data)]
              ["src/clj/{{sanitized}}/nrepl.clj" (render "src/clj/atak_clj/nrepl.clj" data)]
-             ["test/clj/{{name}}/test/handler.clj" (render "test/clj/atak_clj/test/handler.clj" data)]
+             ["test/clj/{{sanitized}}/test/handler.clj" (render "test/clj/atak_clj/test/handler.clj" data)]
 
              [".gitignore" (render ".gitignore" data)]
              ["Capstanfile" (render "Capstanfile" data)]
