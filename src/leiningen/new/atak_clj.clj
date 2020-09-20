@@ -31,6 +31,8 @@
              ["src/clj/{{sanitized}}/routes/files.clj" (render "src/clj/atak_clj/routes/files.clj" data)]
              ["src/clj/{{sanitized}}/routes/health.clj" (render "src/clj/atak_clj/routes/health.clj" data)]
              ["src/clj/{{sanitized}}/routes/math.clj" (render "src/clj/atak_clj/routes/math.clj" data)]
+             ["src/clj/{{sanitized}}/services/file.clj" (render "src/clj/atak_clj/services/file.clj" data)]
+             ["src/clj/{{sanitized}}/services/math.clj" (render "src/clj/atak_clj/services/math.clj" data)]
              ["src/clj/{{sanitized}}/config.clj" (render "src/clj/atak_clj/config.clj" data)]
              ["src/clj/{{sanitized}}/core.clj" (render "src/clj/atak_clj/core.clj" data)]
              ["src/clj/{{sanitized}}/handler.clj" (render "src/clj/atak_clj/handler.clj" data)]

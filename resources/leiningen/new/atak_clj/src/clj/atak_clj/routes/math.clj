@@ -1,7 +1,9 @@
-(ns {{name}}.routes.math)
+(ns {{name}}.routes.math
+  (:require [{{name}}.services.math :refer [sum]]))
 
 {{! Change mustache delimiter to <% and %>}}
 {{=<% %>=}}
+
 (defn math-routes []
    ;; swagger documentation
   ["/math"
@@ -10,14 +12,14 @@
     {:get {:summary "plus with spec query parameters"
            :parameters {:query {:x int?, :y int?}}
            :responses {200 {:body {:total pos-int?}}}
-           :handler (fn [{{{:keys [x y]} :query} :parameters}]
+           :handler (fn [{{:keys [query]} :parameters}]
                       {:status 200
-                       :body {:total (+ x y)}})}
+                       :body {:total (sum query)}})}
      :post {:summary "plus with spec body parameters"
             :parameters {:body {:x int?, :y int?}}
             :responses {200 {:body {:total pos-int?}}}
-            :handler (fn [{{{:keys [x y]} :body} :parameters}]
+            :handler (fn [{{:keys [body]} :parameters}]
                        {:status 200
-                        :body {:total (+ x y)}})}}]])
+                        :body {:total (sum body)}})}}]])
 <%! Reset mustache delimiter %>
 <%={{ }}=%>

@@ -1,5 +1,5 @@
 (ns {{name}}.routes.files
-  (:require [clojure.java.io :as io]
+  (:require [{{name}}.services.file :refer [get-picture]]
             [reitit.ring.middleware.multipart :as multipart]))
 
 {{! Change mustache delimiter to <% and %>}}
@@ -22,8 +22,6 @@
            :handler (fn [_]
                       {:status 200
                        :headers {"Content-Type" "image/png"}
-                       :body (-> "public/img/warning_clojure.png"
-                                 (io/resource)
-                                 (io/input-stream))})}}]])
+                       :body (get-picture)})}}]])
 <%! Reset mustache delimiter %>
 <%={{ }}=%>
