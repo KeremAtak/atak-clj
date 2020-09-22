@@ -16,7 +16,6 @@
 
    ["resources/docs/docs.md" "resources/docs/docs.md"]
    ["resources/html/error.html" "resources/html/error.html"]
-   ["resources/public/img/warning_clojure.png" "resources/public/img/warning_clojure.png"]
    ["resources/favicon.ico" "resources/favicon.ico"]
 
    ["src/clj/{{sanitized}}/middleware/exception.clj" "src/clj/atak_clj/middleware/exception.clj"]
@@ -51,3 +50,6 @@
    ["project.clj" "project.clj"]
    ["README.md" "README.md"]
    ["test-config.edn" "test-config.edn"]])
+
+(def binary-file-paths
+  [["resources/public/img/warning_clojure.png" "resources/public/img/warning_clojure.png"]])
