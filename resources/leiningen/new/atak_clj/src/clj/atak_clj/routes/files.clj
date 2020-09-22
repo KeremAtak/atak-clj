@@ -1,6 +1,6 @@
 (ns {{name}}.routes.files
-  (:require [{{name}}.services.file :refer [get-picture]]
-            [reitit.ring.middleware.multipart :as multipart]))
+    (:require [{{name}}.schemas.files :refer [upload-request upload-response]]
+              [{{name}}.services.file :refer [get-picture]]))
 
 {{! Change mustache delimiter to <% and %>}}
 {{=<% %>=}}
@@ -10,8 +10,8 @@
    {:swagger {:tags ["files"]}}
    ["/upload"
     {:post {:summary "upload a file"
-            :parameters {:multipart {:file multipart/temp-file-part}}
-            :responses {200 {:body {:name string?, :size int?}}}
+            :parameters {:multipart upload-request}
+            :responses {200 {:body upload-response}}
             :handler (fn [{{{:keys [file]} :multipart} :parameters}]
                        {:status 200
                         :body {:name (:filename file)
