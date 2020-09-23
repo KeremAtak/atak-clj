@@ -15,8 +15,17 @@
    ["env/test/resources/logback.xml" "env/test/resources/logback.xml"]
 
    ["resources/docs/docs.md" "resources/docs/docs.md"]
+
    ["resources/html/error.html" "resources/html/error.html"]
+
+   ["resources/migrations/20200922222602-add-users-table.down.sql" "resources/migrations/20200922222602-add-users-table.down.sql"]
+   ["resources/migrations/20200922222602-add-users-table.up.sql" "resources/migrations/20200922222602-add-users-table.up.sql"]
+
+   ["resources/sql/math-queries.sql" "resources/sql/math-queries.sql"]
+
    ["resources/favicon.ico" "resources/favicon.ico"]
+
+   ["src/clj/{{sanitized}}/db/core.clj" "src/clj/atak_clj/db/core.clj"]
 
    ["src/clj/{{sanitized}}/middleware/exception.clj" "src/clj/atak_clj/middleware/exception.clj"]
    ["src/clj/{{sanitized}}/middleware/formats.clj" "src/clj/atak_clj/middleware/formats.clj"]
