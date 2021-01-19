@@ -18,8 +18,8 @@
 
    ["resources/html/error.html" "resources/html/error.html"]
 
-   ["resources/migrations/20200922222602-add-users-table.down.sql" "resources/migrations/20200922222602-add-users-table.down.sql"]
-   ["resources/migrations/20200922222602-add-users-table.up.sql" "resources/migrations/20200922222602-add-users-table.up.sql"]
+   ["resources/migrations/20200929010223-math-tables.down.sql" "resources/migrations/20200929010223-math-tables.down.sql"]
+   ["resources/migrations/20200929010223-math-tables.up.sql" "resources/migrations/20200929010223-math-tables.up.sql"]
 
    ["resources/sql/math-queries.sql" "resources/sql/math-queries.sql"]
 
